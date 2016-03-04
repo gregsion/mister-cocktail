@@ -1,0 +1,11 @@
+h1 Cocktails
+
+.row
+  .col-xs-12
+    ul
+    - @cocktails.each do |cocktail|
+      li = link_to cocktail.name, cocktail_path(cocktail)
+
+.row
+  .col-xs-12
+    p = link_to 'Add a new Cocktail', new_cocktail_path

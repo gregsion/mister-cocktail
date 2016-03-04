@@ -1,6 +1,6 @@
 class Dose < ActiveRecord::Base
-  belongs_to :ingredient
-  belongs_to :cocktail
+  belongs_to :cocktail,   required: true
+  belongs_to :ingredient, required: true
 
-  validates_presence_of :description, :cocktail, :ingredient
+  validates_uniqueness_of :cocktail, scope: [:ingredient]
 end

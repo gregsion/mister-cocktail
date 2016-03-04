@@ -1,0 +1,8 @@
+h1 Create a new Cocktail
+
+= simple_form_for(@cocktail) do |form|
+  = form.error_notification
+
+  = form.input :name
+
+  = form.button :submit, "Create a new Cocktail", class: "btn btn-primary"

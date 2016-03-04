@@ -1,0 +1,7 @@
+h1 = "Add a new Ingredient for #{@cocktail.name}"
+
+= simple_form_for([@cocktail, @dose]) do |form|
+  = form.association :ingredient
+  = form.input :description
+
+  = form.button :submit, "Create a new Ingredient", class: "btn btn-primary"
